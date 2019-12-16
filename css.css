@@ -16,9 +16,9 @@ body, .midden {
     background-color: red;
 }
 
-/* .midden {
+.midden {
     overflow: hidden;
-} */
+}
 
 .midden h1 {
     text-align: center;

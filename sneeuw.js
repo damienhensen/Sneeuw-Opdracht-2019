@@ -108,7 +108,9 @@ let codeSVGvlok = '<svg version="1.1" class="vlokje" xmlns="http://www.w3.org/20
 
 
 let screenw = window.innerWidth;
-let screenh = window.innerHeight + 'px';
+let screenh = window.innerHeight;
+console.log(screenh);
+
 
 class Sneeuw {
   constructor( horizontaal, verticaal, snelheid ) {
@@ -132,8 +134,9 @@ class Sneeuw {
     this._liluzivert += this._lightningmcqueen;
     this._sneeuw.style.top = this._liluzivert + 'px';
     
-    if (this._liluzivert > 1000) {
-      this._liluzivert = 0;
+    if (this._liluzivert > screenh) {
+      this._liluzivert = Math.random()*-50;
+      this._sapwereled = Math.random()*(screenw-30);
     } else {
       this._liluzivert += this._lightningmcqueen;
       this._sneeuw.style.top = this._liluzivert + 'px';
@@ -150,18 +153,8 @@ class Sneeuw {
   }
 }
 
-var objs = new Array();
+for (let i = 0; i < 16; i++) {
+  window['snow'+i] = new Sneeuw(Math.random()*(screenw-30), Math.random()*-50, 1+Math.random()*4);
 
-// for (let i = 0; i < 5; i++) {
-//   objs[i] = new Sneeuw(Math.random()*(screen-30), Math.random()*-10, 4);
-//   objs[i].maken();
-// }
-
-let sneeuw1 = new Sneeuw(Math.random()*(screenw-30), Math.random()*20, 4);
-sneeuw1.maken();
-
-let sneeuw2 = new Sneeuw(Math.random()*(screenw-30), Math.random()*20, 4);
-sneeuw2.maken();
-
-let sneeuw3 = new Sneeuw(Math.random()*(screenw-30), Math.random()*20, 4);
-sneeuw3.maken();
+  window['snow'+i].maken();
+}
