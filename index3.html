@@ -37,9 +37,9 @@
       }
       // method om auto's te laten rijden
       verplaatsen() {
-         this._hori += this._snelh;
+         this._vert += this._snelh;
          // bijwerken in de DOM
-         this._auto.style.left = this._hori + 'px';
+         this._auto.style.top = this._vert + 'px';
       }
       // rijden is een method om continue te verplaatsen
       rijden() {
@@ -50,12 +50,17 @@
       }
    }
 
+   let screen = window.innerWidth;
+
    // twee instanties van de class Auto maken
-   let auto1 = new Auto(Math.random()*200, Math.random()*500, 4, 'red');
+   let auto1 = new Auto(Math.random()*(screen-30), Math.random()*-10, 4, 'red');
    auto1.maken();
 
-   let auto2 = new Auto(Math.random()*200, Math.random()*500, 2, 'green');
+   let auto2 = new Auto(Math.random()*(screen-30), Math.random()*-10, 2, 'green');
    auto2.maken();
+
+   let auto3 = new Auto(Math.random()*(screen-30), Math.random()*-10, 5, 'purple');
+   auto3.maken();
 </script>
 </body>
 </html>
