@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+}
+
+body, .midden {
+    width: 100vw;
+    height: 100vh;
+}
+
+.midden {
+    background-color: pink;
+}
+
+.midden h1 {
+    text-align: center;
+}
+
+.sneeuw-div {
+    max-width:22.5em;
+    position: absolute;
+    top: 0;
+}
+
+.sneeuw-div line {
+    stroke: white;
+}
+
+.sneeuw-div polygon {
+    fill: none;
+    stroke: white;
+}
+
