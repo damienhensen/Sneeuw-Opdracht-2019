@@ -107,7 +107,8 @@ let codeSVGvlok = '<svg version="1.1" class="vlokje" xmlns="http://www.w3.org/20
   ' </svg>';
 
 
-
+let screenw = window.innerWidth;
+let screenh = window.innerHeight + 'px';
 
 class Sneeuw {
   constructor( horizontaal, verticaal, snelheid ) {
@@ -130,6 +131,15 @@ class Sneeuw {
   verplaatsen() {
     this._liluzivert += this._lightningmcqueen;
     this._sneeuw.style.top = this._liluzivert + 'px';
+    
+    if (this._liluzivert > 1000) {
+      this._liluzivert = 0;
+    } else {
+      this._liluzivert += this._lightningmcqueen;
+      this._sneeuw.style.top = this._liluzivert + 'px';
+    }
+    
+    
   }
 
   rijden() {
@@ -147,13 +157,11 @@ var objs = new Array();
 //   objs[i].maken();
 // }
 
-let screen = window.innerWidth;
-
-let sneeuw1 = new Sneeuw(Math.random()*(screen-30), Math.random()*20, 4);
+let sneeuw1 = new Sneeuw(Math.random()*(screenw-30), Math.random()*20, 4);
 sneeuw1.maken();
 
-let sneeuw2 = new Sneeuw(Math.random()*(screen-30), Math.random()*20, 4);
+let sneeuw2 = new Sneeuw(Math.random()*(screenw-30), Math.random()*20, 4);
 sneeuw2.maken();
 
-let sneeuw3 = new Sneeuw(Math.random()*(screen-30), Math.random()*20, 4);
+let sneeuw3 = new Sneeuw(Math.random()*(screenw-30), Math.random()*20, 4);
 sneeuw3.maken();
