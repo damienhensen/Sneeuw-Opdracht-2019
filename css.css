@@ -2,27 +2,36 @@
     margin: 0;
 }
 
+html {
+    overflow: hidden;
+}
+
 body, .midden {
+    color: green;
     width: 100vw;
     height: 100vh;
 }
 
-.midden {
-    background-color: pink;
+.midden, html {
+    background-color: red;
 }
+
+/* .midden {
+    overflow: hidden;
+} */
 
 .midden h1 {
     text-align: center;
 }
 
 .sneeuw-div {
-    max-width:22.5em;
     position: absolute;
-    top: 0;
+    max-width: 10em;
 }
 
 .sneeuw-div line {
     stroke: white;
+    stroke-width: 10px;
 }
 
 .sneeuw-div polygon {
