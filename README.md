@@ -2,4 +2,4 @@
  
 Gemaakt door Damien en Patrick
 
-25890.hosts2.ma-cloud.nl/bewijzenmap/periode2.1/FRO/sneeuw/index.html
+http://25890.hosts2.ma-cloud.nl/bewijzenmap/periode2.1/FRO/sneeuw/index.html
